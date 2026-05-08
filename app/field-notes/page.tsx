@@ -11,15 +11,10 @@ export default function FieldNotesPage() {
       <p className="display-title mt-4 text-[19px] italic text-[var(--muted)]">
         Three short posts from the PSYC 450 discussion forum.
       </p>
-      <p className="mt-5 max-w-[28rem] text-[15px] italic leading-[1.5] text-[var(--muted)]">
-        Kept in their original conversational register - written for classmates, not for a
-        portfolio audience. Included here because the writing process is part of the work.
-      </p>
 
       <Rule />
 
       <FieldNoteBlock
-        date="2025-04-XX"
         source="YELLOWDIG · PSYC 450"
         title="Color Blind or Color Brave"
         citation={{
@@ -80,7 +75,6 @@ export default function FieldNotesPage() {
       </FieldNoteBlock>
 
       <FieldNoteBlock
-        date="2025-04-XX"
         source="YELLOWDIG · PSYC 450"
         title="Is it the policy or the people that make inclusion real?"
         citation={{
@@ -118,7 +112,6 @@ export default function FieldNotesPage() {
       </FieldNoteBlock>
 
       <FieldNoteBlock
-        date="2025-04-XX"
         source="YELLOWDIG · PSYC 450"
         title="Accent Switching"
         citation={{

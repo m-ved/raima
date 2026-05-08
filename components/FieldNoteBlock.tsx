@@ -8,7 +8,6 @@ type Citation = {
 };
 
 type FieldNoteBlockProps = {
-  date: string;
   source: string;
   title: string;
   citation: Citation;
@@ -16,7 +15,6 @@ type FieldNoteBlockProps = {
 };
 
 export function FieldNoteBlock({
-  date,
   source,
   title,
   citation,
@@ -24,9 +22,7 @@ export function FieldNoteBlock({
 }: FieldNoteBlockProps) {
   return (
     <article className="my-12 border-l-2 border-[var(--rule)] pl-6">
-      <p className="running-meta mb-5">
-        {date} · {source}
-      </p>
+      <p className="running-meta mb-5">{source}</p>
       <h2 className="display-title mb-6 text-[24px] font-medium tracking-[-0.01em]">{title}</h2>
       <div className="text-[15px] leading-[1.5] [&>p]:mb-4">{children}</div>
       <div className="mt-8 border-t border-[var(--rule)] pt-4 text-[13px] leading-[1.5] text-[var(--muted)]">

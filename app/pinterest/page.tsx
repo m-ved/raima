@@ -200,7 +200,7 @@ export default function PinterestPage() {
       <section className="content-prose">
         <p className="section-mono mb-4">§ DOWNLOAD</p>
         <p>
-          ↗ <a href="/pinterest-case-analysis.pdf">Read the full paper (PDF, 14 pages)</a>
+          ↗ <a href="/DEI%20%26%20Pinterest.pdf">Read the full paper (PDF, 14 pages)</a>
         </p>
       </section>
 
