@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { PageNav } from "@/components/PageNav";
 import { Rule } from "@/components/Rule";
 import { SectionLabel } from "@/components/SectionLabel";
@@ -32,6 +33,32 @@ export default function EngagementPage() {
           empathy. Engaging with these efforts beyond the classroom was a way to extend the work of
           the course into practice.
         </p>
+      </section>
+      <section className="mt-10 grid gap-8">
+        <figure className="max-w-[32rem]">
+          <Image
+            src="/il.jpg"
+            alt="Illinois Tech climate survey completion screenshot"
+            width={1024}
+            height={421}
+            className="h-auto w-full border border-[var(--rule)]"
+          />
+          <figcaption className="running-meta mt-3 normal-case tracking-[0.08em]">
+            Sexual Misconduct Climate Survey confirmation
+          </figcaption>
+        </figure>
+        <figure className="mx-auto max-w-[26rem]">
+          <Image
+            src="/denim.jpg"
+            alt="Denim Day participation photo"
+            width={768}
+            height={1024}
+            className="h-auto w-full border border-[var(--rule)]"
+          />
+          <figcaption className="running-meta mt-3 normal-case tracking-[0.08em]">
+            Denim Day engagement
+          </figcaption>
+        </figure>
       </section>
 
       <Rule />
