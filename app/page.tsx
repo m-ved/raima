@@ -1,65 +1,85 @@
-import Image from "next/image";
+import Link from "next/link";
+import { Rule } from "@/components/Rule";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <article className="py-10">
+      <div className="h-[120px]" />
+
+      <section className="text-center">
+        <h1 className="display-title text-[56px] font-semibold tracking-[-0.01em]">DEI Portfolio</h1>
+        <p className="display-title mt-3 text-[18px] italic text-[var(--muted)]">
+          Reflections, a case analysis, Yellowdig posts,
+          <br />
+          and engagement from PSYC 450.
+        </p>
+        <hr className="mx-auto mt-8 w-[200px] border-0 border-t border-[var(--rule)]" />
+        <div className="mt-10">
+          <h2 className="display-title text-[22px] font-medium">Raima Debnath</h2>
+          <p className="mt-3 text-[14px] leading-[1.6] text-[var(--muted)]">
+            Department of Industrial-Organizational Psychology
+            <br />
+            Illinois Institute of Technology
+            <br />
+            Dr. Robert Keating · Spring 2026
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      <section className="mt-20">
+        <p className="section-mono mb-4">§ ABSTRACT</p>
+        <div className="content-prose">
+          <p>
+            This portfolio collects work from a single semester spent thinking about how
+            organizations claim to value diversity, equity, and inclusion - and what those claims
+            look like when measured against the structures and decisions that actually shape
+            employee experience. The argument running through these pieces is that DEI as a value
+            depends on DEI as a practice, and that practice is structural, not rhetorical. The
+            pieces are listed below in the order they were written.
+          </p>
         </div>
-      </main>
-    </div>
+      </section>
+
+      <Rule />
+
+      <section>
+        <p className="section-mono mb-6">§ CONTENTS</p>
+        <div className="grid grid-cols-[48px_1fr_auto] gap-x-4 gap-y-4 text-[16px]">
+          <span className="running-meta text-[10px]">01</span>
+          <span>DEI Reflection Statement</span>
+          <Link className="text-[var(--muted)]" href="/reflection">
+            → /reflection
+          </Link>
+
+          <span className="running-meta text-[10px]">02</span>
+          <span>Designing Equity at Pinterest</span>
+          <Link className="text-[var(--muted)]" href="/pinterest">
+            → /pinterest
+          </Link>
+
+          <span className="running-meta text-[10px]">03</span>
+          <span>Applied Project</span>
+          <Link className="text-[var(--muted)]" href="/applied-project">
+            → /applied-project
+          </Link>
+
+          <span className="running-meta text-[10px]">04</span>
+          <span>Yellowdig Posts (PSYC 450 forum)</span>
+          <Link className="text-[var(--muted)]" href="/field-notes">
+            → /field-notes
+          </Link>
+
+          <span className="running-meta text-[10px]">05</span>
+          <span>DEI Engagement</span>
+          <Link className="text-[var(--muted)]" href="/engagement">
+            → /engagement
+          </Link>
+        </div>
+      </section>
+
+      <p className="display-title mt-20 text-center text-[16px] italic text-[var(--muted)]">
+        Submitted in partial fulfillment of PSYC 450 coursework, May 2026.
+      </p>
+    </article>
   );
 }
